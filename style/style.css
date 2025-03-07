@@ -4,3 +4,16 @@ body {
     width: 100%;
     margin: 0;
 }
+
+.container {
+    display: flex;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.centered {
+    align-items: center;
+    justify-content: center;
+}
