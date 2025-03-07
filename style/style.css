@@ -26,3 +26,10 @@ body {
 .full_height {
     height: 100%;
 }
+
+#sketch_area {
+    height: 500px;
+    width: 500px;
+    /* temporary color */
+    background-color: grey;
+}
