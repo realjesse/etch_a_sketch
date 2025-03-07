@@ -34,8 +34,7 @@ body {
 #sketch_area {
     height: 500px;
     width: 500px;
-    /* temporary color */
-    background-color: grey;
+    border: black solid 1px;
 }
 
 .tool_bar {
