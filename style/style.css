@@ -5,6 +5,10 @@ body {
     margin: 0;
 }
 
+.main {
+    background-color: #ededed;
+}
+
 .container {
     display: flex;
 }
@@ -35,6 +39,7 @@ body {
     height: 500px;
     width: 500px;
     border: black solid 1px;
+    background-color: white;
 }
 
 .tool_bar {
