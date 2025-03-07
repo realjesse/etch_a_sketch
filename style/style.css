@@ -27,6 +27,10 @@ body {
     height: 100%;
 }
 
+.content {
+    gap: 40px;
+}
+
 #sketch_area {
     height: 500px;
     width: 500px;
