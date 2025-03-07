@@ -37,3 +37,7 @@ body {
     /* temporary color */
     background-color: grey;
 }
+
+.tool_bar {
+    gap: 15px;
+}
