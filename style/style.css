@@ -17,3 +17,12 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.space_between {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.full_height {
+    height: 100%;
+}
