@@ -2,6 +2,7 @@
 let sketchAreaNode = document.querySelector("#sketch_area");
 let gridsizeButtonNode = document.querySelector("#gridsize");
 let clearButtonNode = document.querySelector("#clear_button");
+let rgbButtonNode = document.querySelector("#RGB_button");
 let isDragging = false;
 let isColorful = false;
 let gridsize = 16;
@@ -72,6 +73,9 @@ clearButtonNode.addEventListener('click', () => {
     clearGrid();
     createGrid(gridsize);
 });
+rgbButtonNode.addEventListener('click', () => {
+    isColorful = true;
+})
 
 // Test
 createGrid(gridsize);
