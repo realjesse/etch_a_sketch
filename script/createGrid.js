@@ -14,6 +14,7 @@ function createGrid(numOfPixels) {
         // Create the individual pixels
         for (j = 0; j < numOfPixels; j++) {
             const pixel = document.createElement("div");
+            pixel.classList.add("pixel");
             pixel.style.width = `${lengthOfPixel}px`;
             pixel.style.height = `${lengthOfPixel}px`;
             rowPixelContainer.appendChild(pixel);
