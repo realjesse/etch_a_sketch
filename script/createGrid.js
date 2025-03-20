@@ -24,5 +24,10 @@ function createGrid(numOfPixels) {
     }
 }
 
+// Edit pixel style
+function stylePixel(event) {
+    
+}
+
 // Test
 createGrid(16);
