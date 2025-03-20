@@ -1,2 +1,6 @@
 // Initialize variables and constants
-let sketch_area_node = document.querySelector("sketch_area")
+let sketchAreaNode = document.querySelector("sketch_area");
+
+function createGrid(numOfPixels) {
+    
+}
