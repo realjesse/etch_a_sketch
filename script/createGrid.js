@@ -6,10 +6,12 @@ function createGrid(numOfPixels) {
 
     for (i = 0; i < numOfPixels; i++) {
         const rowPixelContainer = document.createElement("div");
+        rowPixelContainer.style.display = "flex";
 
         for (j = 0; j < numOfPixels; j++) {
             const pixel = document.createElement("div");
-            
+            pixel.style.width = `${lengthOfPixel}px`;
+            rowPixelContainer.appendChild(pixel);
         }
     }
 }
