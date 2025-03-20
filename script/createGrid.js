@@ -27,6 +27,7 @@ function createGrid(numOfPixels) {
             pixel.classList.add("pixel");
             pixel.style.width = `${lengthOfPixel}px`;
             pixel.style.height = `${lengthOfPixel}px`;
+            pixel.style.opacity = "0";
             rowPixelContainer.appendChild(pixel);
         }
 
@@ -44,12 +45,14 @@ function stylePixel(event) {
     if (isDragging === true && event.target.className === "pixel") {
         if (isColorful) {
             event.target.style.backgroundColor = `rgb(${getRandomInt()}, ${getRandomInt()}, ${getRandomInt()})`;
+            event.target.style.opacity = "100";
         }
         else if (isShading) {
-            console.log(event.target.style.opacity);
+            let currentOpacity = event.target.style.opacity;
         }
         else {
             event.target.style.backgroundColor = 'black';
+            event.target.style.opacity = "100";
         }
     }
 }
