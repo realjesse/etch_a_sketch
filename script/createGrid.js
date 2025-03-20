@@ -1,7 +1,9 @@
 // Initialize variables and constants
 let sketchAreaNode = document.querySelector("#sketch_area");
 let gridsizeButtonNode = document.querySelector("#gridsize");
+let clearButtonNode = document.querySelector("#clear_button");
 let isDragging = false;
+let gridsize = 16;
 
 // Create the pixelated grid
 function createGrid(numOfPixels) {
@@ -56,7 +58,7 @@ function endColoring() {
 
 // Get new gridsize, create new grid
 function getGridsize() {
-    let gridsize = parseInt(prompt("What gridsize do you want?"))
+    gridsize = parseInt(prompt("What gridsize do you want?"))
     createGrid(gridsize);
 }
 
@@ -65,6 +67,10 @@ sketchAreaNode.addEventListener('mousedown', startColoring);
 sketchAreaNode.addEventListener('mouseover', stylePixel);
 sketchAreaNode.addEventListener('mouseup', endColoring);
 gridsizeButtonNode.addEventListener('click', getGridsize);
+clearButtonNode.addEventListener('click', () => {
+    clearGrid();
+    createGrid(gridsize);
+});
 
 // Test
-createGrid(16);
+createGrid(gridsize);
