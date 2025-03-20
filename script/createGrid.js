@@ -39,7 +39,12 @@ function clearGrid() {
 // Edit pixel style
 function stylePixel(event) {
     if (isDragging === true && event.target.className === "pixel") {
-        event.target.style.backgroundColor = 'black';
+        if (isColorful) {
+
+        }
+        else {
+            event.target.style.backgroundColor = 'black';
+        }
     }
 }
 
@@ -62,6 +67,11 @@ function endColoring() {
 function getGridsize() {
     gridsize = parseInt(prompt("What gridsize do you want?"))
     createGrid(gridsize);
+}
+
+// Get random int from 0 to 255, for rgb coloring
+function getRandomInt() {
+    return Math.floor(Math.random() * 256)
 }
 
 // Add event listener
