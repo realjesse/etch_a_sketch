@@ -28,15 +28,28 @@ function createGrid(numOfPixels) {
 
 // Edit pixel style
 function stylePixel(event) {
-    if (event.target.className === "pixel") {
+    if (isDragging === true && event.target.className === "pixel") {
         event.target.style.backgroundColor = 'black';
+    }
+}
+
+// Starting coloring
+function startColoring(event) {
+    if (event.target.className === "pixel") {
+        stylePixel(event);
         isDragging = true;
     }
 }
 
+// End coloring
+function endColoring() {
+    isDragging = false;
+}
+
 // Add event listener
-sketchAreaNode.addEventListener('mousedown', stylePixel);
-sketchAreaNode.addEventListener('mouseover', null)
+sketchAreaNode.addEventListener('mousedown', startColoring);
+sketchAreaNode.addEventListener('mouseover', stylePixel);
+sketchAreaNode.addEventListener('mouseup', endColoring);
 
 // Test
 createGrid(16);
