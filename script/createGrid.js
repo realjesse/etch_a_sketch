@@ -4,6 +4,7 @@ let gridsizeButtonNode = document.querySelector("#gridsize");
 let clearButtonNode = document.querySelector("#clear_button");
 let rgbButtonNode = document.querySelector("#RGB_button");
 let blackButtonNode = document.querySelector("#black_button");
+let isShading = false;
 let isDragging = false;
 let isColorful = false;
 let gridsize = 16;
@@ -43,6 +44,9 @@ function stylePixel(event) {
         if (isColorful) {
             event.target.style.backgroundColor = `rgb(${getRandomInt()}, ${getRandomInt()}, ${getRandomInt()})`;
         }
+        else if (isShading) {
+            console.log(event.target.style.opacity);
+        }
         else {
             event.target.style.backgroundColor = 'black';
         }
@@ -54,8 +58,8 @@ function startColoring(event) {
     if (event.target.className === "pixel") {
         // Prevents the browser from trying to drag element
         event.preventDefault();
-        stylePixel(event);
         isDragging = true;
+        stylePixel(event);
     }
 }
 
