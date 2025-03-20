@@ -1,5 +1,6 @@
 // Initialize variables and constants
 let sketchAreaNode = document.querySelector("#sketch_area");
+let isDragging = false;
 
 // Create the pixelated grid
 function createGrid(numOfPixels) {
@@ -29,11 +30,13 @@ function createGrid(numOfPixels) {
 function stylePixel(event) {
     if (event.target.className === "pixel") {
         event.target.style.backgroundColor = 'black';
+        isDragging = true;
     }
 }
 
 // Add event listener
-sketchAreaNode.addEventListener('click', stylePixel);
+sketchAreaNode.addEventListener('mousedown', stylePixel);
+sketchAreaNode.addEventListener('mouseover', null)
 
 // Test
 createGrid(16);
