@@ -27,7 +27,9 @@ function createGrid(numOfPixels) {
 
 // Edit pixel style
 function stylePixel(event) {
-    
+    if (event.target.className === "pixel") {
+        
+    }
 }
 
 // Test
