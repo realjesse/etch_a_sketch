@@ -3,6 +3,7 @@ let sketchAreaNode = document.querySelector("#sketch_area");
 let gridsizeButtonNode = document.querySelector("#gridsize");
 let clearButtonNode = document.querySelector("#clear_button");
 let isDragging = false;
+let isColorful = false;
 let gridsize = 16;
 
 // Create the pixelated grid
