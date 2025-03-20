@@ -40,7 +40,7 @@ function clearGrid() {
 function stylePixel(event) {
     if (isDragging === true && event.target.className === "pixel") {
         if (isColorful) {
-
+            event.target.style.backgroundColor = `rgb(${getRandomInt()}, ${getRandomInt()}, ${getRandomInt()})`;
         }
         else {
             event.target.style.backgroundColor = 'black';
