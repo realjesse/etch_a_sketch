@@ -2,10 +2,13 @@
 let sketchAreaNode = document.querySelector("sketch_area");
 
 function createGrid(numOfPixels) {
-    let lengthOfPixel = sketchAreaNode.offsetWidth / numOfPixels;
+    const lengthOfPixel = sketchAreaNode.offsetWidth / numOfPixels;
 
     for (i = 0; i < numOfPixels; i++) {
-        for (j = 0; j < numOfPixels, j++) {
+        const rowPixelContainer = document.createElement("div");
+
+        for (j = 0; j < numOfPixels; j++) {
+            const pixel = document.createElement("div");
             
         }
     }
