@@ -28,9 +28,12 @@ function createGrid(numOfPixels) {
 // Edit pixel style
 function stylePixel(event) {
     if (event.target.className === "pixel") {
-        
+        event.target.style.backgroundColor = 'black';
     }
 }
+
+// Add event listener
+sketchAreaNode.addEventListener('click', stylePixel);
 
 // Test
 createGrid(16);
