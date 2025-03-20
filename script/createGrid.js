@@ -5,6 +5,7 @@ let isDragging = false;
 
 // Create the pixelated grid
 function createGrid(numOfPixels) {
+    clearGrid();
     // Calculate size of pixel
     const lengthOfPixel = sketchAreaNode.offsetWidth / numOfPixels;
 
@@ -25,6 +26,10 @@ function createGrid(numOfPixels) {
         // Append to main page
         sketchAreaNode.appendChild(rowPixelContainer);
     }
+}
+
+function clearGrid() {
+    sketchAreaNode.replaceChildren();
 }
 
 // Edit pixel style
@@ -59,7 +64,7 @@ function getGridsize() {
 sketchAreaNode.addEventListener('mousedown', startColoring);
 sketchAreaNode.addEventListener('mouseover', stylePixel);
 sketchAreaNode.addEventListener('mouseup', endColoring);
-gridsizeButtonNode.addEventListener('click', getGridsize)
+gridsizeButtonNode.addEventListener('click', getGridsize);
 
 // Test
 createGrid(16);
