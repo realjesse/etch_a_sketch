@@ -36,6 +36,8 @@ function stylePixel(event) {
 // Starting coloring
 function startColoring(event) {
     if (event.target.className === "pixel") {
+        // Prevents the browser from trying to drag element
+        event.preventDefault();
         stylePixel(event);
         isDragging = true;
     }
