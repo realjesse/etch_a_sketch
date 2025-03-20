@@ -48,7 +48,12 @@ function stylePixel(event) {
             event.target.style.opacity = "100";
         }
         else if (isShading) {
-            let currentOpacity = event.target.style.opacity;
+            let currentOpacity = parseFloat(event.target.style.opacity);
+            if (currentOpacity <= .9) {
+                event.target.style.opacity = String(currentOpacity + 0.1);
+                event.target.style.backgroundColor = 'black';
+                console.log(event.target.style.opacity);
+            }
         }
         else {
             event.target.style.backgroundColor = 'black';
