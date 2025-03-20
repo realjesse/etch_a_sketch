@@ -11,7 +11,12 @@ function createGrid(numOfPixels) {
         for (j = 0; j < numOfPixels; j++) {
             const pixel = document.createElement("div");
             pixel.style.width = `${lengthOfPixel}px`;
+            pixel.style.height = `${lengthOfPixel}px`;
             rowPixelContainer.appendChild(pixel);
         }
+
+        sketchAreaNode.appendChild(rowPixelContainer);
     }
 }
+
+createGrid(16);
