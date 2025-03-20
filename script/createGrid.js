@@ -4,6 +4,7 @@ let gridsizeButtonNode = document.querySelector("#gridsize");
 let clearButtonNode = document.querySelector("#clear_button");
 let rgbButtonNode = document.querySelector("#RGB_button");
 let blackButtonNode = document.querySelector("#black_button");
+let shadingButtonNode = document.querySelector("#shading_button");
 let isShading = false;
 let isDragging = false;
 let isColorful = false;
@@ -90,10 +91,16 @@ clearButtonNode.addEventListener('click', () => {
 });
 rgbButtonNode.addEventListener('click', () => {
     isColorful = true;
+    isShading = false;
 });
 blackButtonNode.addEventListener('click', () => {
     isColorful = false;
+    isShading = false;
 });
+shadingButtonNode.addEventListener('click', () => {
+    isShading = true;
+    isColorful = false;
+})
 
 // Test
 createGrid(gridsize);
